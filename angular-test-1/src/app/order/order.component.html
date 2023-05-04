@@ -1,0 +1,44 @@
+<div class="nav"></div>
+<div class="container">
+  <div>
+    <input type="hidden" value="{{id}}">
+    <div class="group">
+      <input type="text" [disabled]="isConfirm" [(ngModel)]="nameField" />
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label *ngIf="!isConfirm">Name</label>
+    </div>
+    <div *ngIf="!isValidName" class="group alert">
+      Invalid Name
+    </div>
+
+    <div class="group">
+      <input type="number" [disabled]="isConfirm" [(ngModel)]="quantityField">
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label *ngIf="!isConfirm">Quantity</label>
+    </div>
+
+    <div  *ngIf="!isQuantityValid" class="group alert">
+      Invalid quantity
+    </div>
+
+    <div class="group">
+      <input type="number" step="0.01" [disabled]="isConfirm" [(ngModel)]="totalPriceField">
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label *ngIf="!isConfirm">Total price</label>
+    </div>
+
+    <div  *ngIf="!isTotalPriceValid" class="group alert">
+      Invalid totalPrice
+    </div>
+
+    <div class="group">
+      <button class="simple" type="button" *ngIf="isConfirm" (click)="unConfirmData()"> Go back</button>
+      <button class="simple" type="button" *ngIf="isConfirm" (click)="openDataPage()"> Confirm Order</button>
+      <button class="simple" type="button" *ngIf="!isConfirm" (click)="confirmData()">Order</button>
+    </div>
+  </div>
+
+</div>
