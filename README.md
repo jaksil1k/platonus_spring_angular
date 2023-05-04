@@ -1,6 +1,7 @@
-Гид по заупску проекта:
-перед тем как запускать в папке platonusBackend\src\main\resources есть application.properties,
+Гид по запуску проекта:
+перед тем как запускать бэк в папке platonusBackend\src\main\resources есть application.properties,
 и настройте все что начинается от spring.datasource.
+Перед тем как запускать фронт, надо запустить npm install 
 После запустите отдельно бэк и фронт. Все должно заработать если нет,
 то скачайте проект с
 https://github.com/jaksil1k/platonus_spring_angular
